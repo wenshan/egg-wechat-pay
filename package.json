@@ -1,27 +1,66 @@
 {
   "name": "egg-wechat-pay",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "微信支付API egg插件 v3 for nodejs",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
+  "types": "./index.d.ts",
+  "eggPlugin": {
+    "name": "wechatPay"
+  },
+  "keywords": [
+    "egg",
+    "egg-plugin",
+    "egg-wx",
+    "egg-weixin",
+    "egg-wechat",
+    "egg-mp",
+    "wechat",
+    "wxapp"
+  ],
+  "dependencies": {
+    "egg": "^2.23.0",
+    "@peculiar/x509": "^1.2.1",
+    "jsrsasign": "^10.1.12",
+    "urllib": "^2.36.1"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.23.0",
+    "egg-bin": "^5.13.0",
+    "egg-ci": "^1.13.0",
+    "egg-mock": "^3.23.1",
+    "eslint": "^6.2.1",
+    "eslint-config-egg": "^7.4.1",
+    "lodash": "^4.17.14"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app",
+    "config",
+    "index.d.ts"
+  ],
+  "ci": {
+    "version": "8, 10"
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:wenshan/egg-wxpay.git"
+    "url": "git+git@github.com:wenshan/egg-wechat-pay.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/wenshan/egg-wechat-pay/issues"
   },
   "homepage": "https://github.com/wenshan/egg-wechat-pay",
-  "dependencies": {
-    "@peculiar/x509": "^1.2.1",
-    "jsrsasign": "^10.1.12",
-    "urllib": "^2.36.1"
-  }
+  "author": "hou_ve <hou_ve@hotmail.com>",
+  "license": "MIT"
 }
