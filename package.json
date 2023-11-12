@@ -1,0 +1,27 @@
+{
+  "name": "egg-wechat-pay",
+  "version": "1.0.1",
+  "description": "微信支付API egg插件 v3 for nodejs",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:wenshan/egg-wxpay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wenshan/egg-wechat-pay/issues"
+  },
+  "homepage": "https://github.com/wenshan/egg-wechat-pay",
+  "dependencies": {
+    "@peculiar/x509": "^1.2.1",
+    "jsrsasign": "^10.1.12",
+    "urllib": "^2.36.1"
+  }
+}
