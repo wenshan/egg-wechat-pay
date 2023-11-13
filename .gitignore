@@ -6,4 +6,5 @@ coverage/
 .vscode/
 run/
 .DS_Store
+.vscode
 *.swp
